@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Checkout;
 use App\Models\Pizza;
 use App\Models\Order;
 use Illuminate\Http\Request;
@@ -34,5 +35,10 @@ class FrontendController extends Controller
             'body' => $request->body,
         ]);
         return back()->with('message','Your order has been placed');
+    }
+
+    public function history() {
+        $checkouts = Checkout::all();
+        return view('order.history', compact('checkouts'));
     }
 }

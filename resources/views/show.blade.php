@@ -71,8 +71,6 @@
             const selectedOption = selectElement.value;
             updatePrice(selectedOption);
 
-            // ...
-            // ...
             function updatePrice(selectedOption) {
                 // Use conditional statements to update the price based on the selected option
                 let priceValue = 0; // Initialize price value as a number
@@ -92,10 +90,6 @@
                 const pizzaPriceInput = document.getElementById('pizzaPrice');
                 pizzaPriceInput.value = priceValue;
             }
-// ...
-
-// ...
-
         });
     </script>
     <style>

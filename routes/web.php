@@ -26,6 +26,8 @@ Route::get('/pizza/{id}', [App\Http\Controllers\FrontendController::class, 'show
 Route::post('/order/store', [App\Http\Controllers\FrontendController::class, 'store'])->name('order.store');
 Route::get('/user/order', [App\Http\Controllers\UserOrderController::class, 'index'])->name('user.order');
 Route::delete('/order/{id}/delete', [App\Http\Controllers\UserOrderController::class, 'destroy'])->name('order.destroy');
+Route::post('/checkout', [App\Http\Controllers\UserOrderController::class, 'checkout'])->name('checkout');
+Route::get('/order/history', [App\Http\Controllers\FrontendController::class, 'history'])->name('order.history');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {

@@ -56,7 +56,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 @if(auth()->user()->is_admin == 0)
-                                    <a class="dropdown-item" href="{{route('home')}}">
+                                    <a class="dropdown-item" href="{{route('order.history')}}">
                                         {{__('Your order history')}}
                                     </a>
                                 @endif
